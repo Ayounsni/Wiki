@@ -1,0 +1,172 @@
+
+
+/* Color of the navbar BEFORE scroll */
+.navbar-scroll {
+  background-color: #192B6A;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #8d1b1b;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.navbar-brand {
+  font-size: unset;
+  height: 3.5rem;
+}
+body{
+    background-color:  #e6e6e6;
+}
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -40px;
+  left: 19px;
+}
+.orange{
+  background-color: #1facd8 !important;
+}
+.orang{
+  background-color: #FF906C !important;
+}
+.orange1{
+  color: #E44332;
+}
+.card {
+  border: none;
+  border-radius: 10px
+}
+
+.c-details span {
+  font-weight: 300;
+  font-size: 13px
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px
+}
+
+.badge span {
+  background-color: #fffbec;
+  width: 60px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: #fed85d;
+  justify-content: center;
+  align-items: center
+}
+
+.progress {
+  height: 10px;
+  border-radius: 10px
+}
+
+.progress div {
+  background-color: red
+}
+
+.text1 {
+  font-size: 14px;
+  font-weight: 600
+}
+
+.text2 {
+  color: #a5aec0
+}
+
+.thumb-sm {
+  height: 36px;
+  width: 36px;
+}
+.card-box {
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.taskList {
+  min-height: 40px;
+  margin-bottom: 0
+}
+
+.taskList li {
+  background-color: #fff;
+  border: 1px solid rgba(121, 121, 121, .2);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px
+}
+
+.taskList li:last-of-type {
+  margin-bottom: 0
+}
+
+.taskList a {
+  font-size: 13px
+}
+
+.taskList .checkbox {
+  margin-left: 20px;
+  margin-top: 5px
+}
+.text-muted {
+  color: #98a6ad!important;
+}
+.shadow-primary {
+  box-shadow: 0 0 10px #FF906C !important; 
+}
+.h1{
+  height: 50px !important;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.titre:hover{
+  color: #CDBC94 !important;
+  font-size: 18px !important;
+}
+.log:hover{
+  color: #c33838 !important;
+  
+}
