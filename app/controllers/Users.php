@@ -11,10 +11,18 @@
         $this->view('users/index');
       }
 
-      public function login(){
+    public function login(){
       
       
         $this->view('users/login');
       }
+    public function register(){
+
+        $this->view('users/register');
+
+      }
+    public function valid(){
+      $this->view('users/valid');
+    }
     }
     

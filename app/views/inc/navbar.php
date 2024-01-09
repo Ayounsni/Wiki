@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-scroll  shadow-0 border-bottom d-flex align-content-center justify-content-center px-lg-5   ">
 
             
-                <img src="<?php echo URLROOT; ?>/image/wiko.png" alt="logo" class="rounded-4 p-2 " style="width: 130px; height: 60px;">
+                <img src="<?php echo URLROOT; ?>/image/wiko.png" alt="logo" class="rounded-4 p-2 " style="width: 120px; height: 55px;">
                 <div class="p-1 bg-light rounded rounded-pill shadow-sm w-50 mx-auto  text-center ">
         <div class="input-group">
            <input type="search" placeholder="Recherche..." aria-describedby="button-addon1" class="form-control rounded rounded-pill border-0 bg-light">
          <div class="input-group-append">
-       <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+       <button id="button-addon1" type="submit" class="btn btn-link orange1"><i class="fa fa-search"></i></button>
         </div>
          </div>
          </div>
@@ -20,7 +20,7 @@
                 <div class="collapse navbar-collapse m-0 p-0 " id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-around gap-5 ">
                         <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/projets/index">Home</a>
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/projets/index">Accueil</a>
                         </li>
                         
                         <li class="nav-item">
@@ -30,7 +30,7 @@
                             <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/projets/index">Catégories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium btn btn-primary" href="<?php echo URLROOT; ?>/projets/index">Deconnexion</a>
+                            <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/login">Login</a>
                         </li>
                        
                     </ul>
