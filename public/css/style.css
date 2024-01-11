@@ -305,3 +305,36 @@ a:hover, a:focus {
 .blo{
   background-color: #0b6298;
 }
+.main.container {
+  padding-top: 1rem;
+  border: 1px solid #e8eced;
+}
+.edito-poster {
+    width: 100%;
+    max-height: 200px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+}
+
+.truncate-text {
+  
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limite le nombre de lignes à afficher */
+  -webkit-box-orient: vertical;
+}
+.ble{
+  background-color:  #D9EEFC;
+}
+.wi{
+  width: 280px;
+}
+
+.size {
+  font-size: 60px;
+}
+
+.wit{
+  width: 230px !important;
+}

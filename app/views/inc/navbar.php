@@ -19,19 +19,47 @@
                   <div class=" d-flex justify-content-center">
                 <div class="collapse navbar-collapse m-0 p-0 " id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-around gap-5 ">
+                        <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'){  ?>
                         <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/projets/index">Accueil</a>
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/users/index">Accueil</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/statistiques">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/admins/index">Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/logout">Logout</a>
+                        </li>
+                        <?php } elseif(isset($_SESSION['role']) && $_SESSION['role'] == 'auteur'){ ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/users/index">Accueil</a>
                         </li>
                         
                         <li class="nav-item">
                             <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/statistiques">Mes Wikis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/projets/index">Catégories</a>
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/users/logout">Catégories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/login">Login</a>
+                            <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/logout">Logout</a>
                         </li>
+                        <?php }else{ ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/users/index">Accueil</a>
+                        </li>              
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/register">S'incrire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/login">Connexion</a>
+                        </li>
+                        <?php } ?>
+
+
                        
                     </ul>
                     </div>

@@ -8,6 +8,7 @@
     protected $currentController = 'Users';
     protected $currentMethod = 'index';
     protected $params = [];
+    protected $url = [''];
    
 
     public function __construct(){

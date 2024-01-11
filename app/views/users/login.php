@@ -14,7 +14,7 @@
                                 <div class="card-body p-2 px-lg-4 text-black">
 
 
-                                    <form method="post" action="">
+                                    <form method="post" action="<?php echo URLROOT; ?>/users/login" onsubmit="return validateForme(event)">
                                         <div class="d-flex justify-content-end"><a href="<?php echo URLROOT; ?>/users/index" class="fs-6 btn orange text-white"><i class="bi bi-backspace-fill"></i></a></div>
 
                                         <div class="d-flex align-items-center  justify-content-center mb-3 pb-1 radiu">
@@ -25,16 +25,16 @@
                                             votre compte</h5>
 
                                         <div class="form-floating mb-4">
-                                            <input type="email" class="form-control" name="email" id="floatingInput" value=""
+                                            <input type="email" class="form-control" name="email" id="emaile" value="<?php echo $data['email']; ?>"
                                                 placeholder="name@example.com">
                                             <label for="floatingInput" class="text-secondary">Email </label>
-                                            <span class="ms-2 text-danger "></span>
+                                            <span class="ms-2 text-danger" id="emaileError"><?php echo $data['email_err']; ?></span>
                                         </div>
                                         <div class="form-floating mb-4 ">
                                             <input type="password" class="form-control" name="password"
-                                                id="floatingPassword" placeholder="Password">
+                                                id="passworde" placeholder="Password">
                                             <label for="floatingPassword" class="text-secondary">Mot de passe</label>
-                                            <span class=" ms-2 text-danger "></span>
+                                            <span class=" ms-2 text-danger" id="passwordeError"><?php echo $data['password_err']; ?></span>
                                         </div>
 
                                         <div class="pt-1 mb-4 d-flex justify-content-end">
@@ -57,5 +57,5 @@
         </div>
     </section>
 </body>
-
+<script src="<?php echo URLROOT; ?>/js/validateLog.js"></script>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
