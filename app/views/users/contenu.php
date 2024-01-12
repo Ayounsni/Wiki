@@ -10,12 +10,12 @@
         <h1 class="border-bottom fs-2 fw-bold text-center "><?php echo $data['wikis']->titre ?></h1>
         <p class="border p-2"><?php echo $data['wikis']->contenu ?></p>
              <div class="d-flex justify-content-between">
-                <div class="d-flex flex-column ">
-                    <p class=" fw-bold ">categorie: <span class="orange1 fw-normal"><?php echo $data['wikis']->categorie_name  ?></span></p>
-                    <p class="fw-bold">tags: <span class="orange1 fw-normal"> <?php foreach($data['wikitags'] as $tag) : ?>#<?php echo $tag->tag_name ;?> / <?php endforeach; ?> </span></p>
+                <div class="d-flex flex-column w-50 ">
+                    <p class=" fw-bold ">Catégorie: <span class="orange1 fw-normal"><?php echo $data['wikis']->categorie_name  ?></span></p>
+                    <p class="fw-bold">Tags: <span class="orange1 fw-normal"> <?php foreach($data['wikitags'] as $tag) : ?>#<?php echo $tag->tag_name ;?> / <?php endforeach; ?> </span></p>
                 </div>
                 <div class=" ">
-                    <p class="fw-bold ">auteur: <span class="orange1 fw-normal"><?php echo $data['wikis']->prenom; echo ' '; echo $data['wikis']->nom ;?></span></p>
+                    <p class="fw-bold ">Auteur: <span class="orange1 fw-normal"><?php echo $data['wikis']->prenom; echo ' '; echo $data['wikis']->nom ;?></span></p>
                 </div>
              </div>
             </div>

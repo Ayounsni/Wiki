@@ -31,20 +31,20 @@
           $data['nameCat_err'] = 'Veuillez entrer le nom du catégorie';
          }
           if(empty($data['nameWiki'])){
-          $data['nameWiki_err'] = 'Veuillez entrer le nom du catégorie';
+          $data['nameWiki_err'] = 'Veuillez entrer le titre de wiki';
          }
           if(empty($data['tags'])){
           $data['tags_err'] = 'Veuillez entrer le nom du catégorie';
            }
           if(empty($data['contenu'])){
-          $data['contenu_err'] = 'Veuillez entrer le nom du catégorie';
+          $data['contenu_err'] = 'Veuillez entrer le contenu';
            }
 
         // Make sure errors are empty
         if(empty($data['nameCat_err']) && empty($data['nameWiki_err']) && empty($data['tags_err']) && empty($data['contenu_err']) ){
           // Validated  
             if($this->wikiModal->addWiki($data)){
-                redirect('admins/index');
+                redirect('users/index');
               
             }else{
               
@@ -73,6 +73,42 @@
             $this->view('auteurs/addWiki', $data);
         }
       }
+
+     public function index(){
+
+        $wikis = $this->wikiModal->displayWikiAuteur();
+        $wikitags = [];
+        foreach ($wikis as $wiki) {
+            $wikitags[$wiki->id_wiki] = $this->wikiModal->displayWikiTag($wiki->id_wiki);
+        }
+  
+        $data=[
+          "wikis" => $wikis,
+          "wikitags"=>$wikitags,
+  
+        ];  
+          $this->view('auteurs/mesWiki',$data);
+        }
+     public function categorie(){
+
+            // $wikis = $this->wikiModal->displayWikiAuteur();
+            // $wikitags = [];
+            // foreach ($wikis as $wiki) {
+            //     $wikitags[$wiki->id_wiki] = $this->wikiModal->displayWikiTag($wiki->id_wiki);
+            // }
+      
+            // $data=[
+            //   "wikis" => $wikis,
+            //   "wikitags"=>$wikitags,
+      
+            // ];  
+              $this->view('auteurs/cat');
+            }
+
+
+    
+
+      
     
   
     }

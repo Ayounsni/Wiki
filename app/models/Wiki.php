@@ -70,6 +70,16 @@ class Wiki {
     
         return $resultat;
     }
+    public function displayWikiAuteur(){
+        $this->db->query('SELECT * FROM wikis INNER JOIN users ON wikis.user_id = users.id_user 
+        INNER JOIN categories ON wikis.categorie_id = categories.id_categorie WHERE wikis.user_id = :id ORDER BY wikis.dateCreation DESC');
+        $this->db->bind(':id',$_SESSION['user_id']);
+        $this->db->execute();
+
+        $resultat= $this->db->resultSet();
+ 
+        return $resultat;
+    }
     
     
 
