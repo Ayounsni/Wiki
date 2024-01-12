@@ -8,7 +8,7 @@
                 <a href="<?php echo URLROOT; ?>/admins/addCat" class="fs-4 text-light text-decoration-none fw-lighter"><i class="bi bi-plus-circle"></i> <span class="fs-5" >Ajouter</span> </a> 
                </div>
                <?php foreach($data['categories'] as $categorie) : ?>
-        <div class="d-flex w justify-content-between align-items-center ble my-2 px-3 text-center shadow rounded-4  ">
+        <div class="d-flex  justify-content-between align-items-center ble my-2 px-3 text-center shadow rounded-4  ">
                <a href="<?php echo URLROOT; ?>/admins/editCat/<?php echo $categorie->id_categorie; ?>" class="float-right my-2 "> <button class="btn orange   btn-sm text-white  text-decoration-none ">
             <i class="bi bi-pencil-fill"></i></button></a>
         <h5 class="m-0 p-2 " style="width: 200px;"><?php echo $categorie->categorie_name; ?></h5> 

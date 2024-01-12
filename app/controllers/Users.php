@@ -3,13 +3,25 @@
 
     public function __construct(){
       $this->userModal = $this->model('user');
+      $this->wikiModal = $this->model('wiki');
     }
 
     public function index(){
+
+      $wikis = $this->wikiModal->displayWiki();
+      $wikitags = [];
+      foreach ($wikis as $wiki) {
+          $wikitags[$wiki->id_wiki] = $this->wikiModal->displayWikiTag($wiki->id_wiki);
+      }
+
+      $data=[
+        "wikis" => $wikis,
+        "wikitags"=>$wikitags,
+
+      ];
    
       
-      
-        $this->view('users/index');
+        $this->view('users/index',$data);
       }
 
     public function login(){
@@ -180,6 +192,19 @@
       }
     public function valid(){
       $this->view('users/valid');
+    }
+    public function contenu($id){
+      $wikis = $this->wikiModal->displayWikiById($id);
+          $wikitags = $this->wikiModal->displayWikiTag($wikis->id_wiki);
+      
+
+      $data=[
+        "wikis" => $wikis,
+        "wikitags"=>$wikitags,
+      ];
+   
+
+      $this->view('users/contenu',$data);
     }
     }
     

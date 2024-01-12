@@ -50,6 +50,10 @@ class Database {
       public function execute(){
         return $this->stmt->execute();
       }
+      public function lastInsertId() {
+        return $this->connection->lastInsertId();
+    }
+
   
       // Get result set as array of objects
       public function resultSet(){

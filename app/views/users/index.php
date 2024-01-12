@@ -10,96 +10,17 @@
         <a href=""><div class=" text-center text-muted size"><i class="bi bi-plus-circle"></i></div></a>
     </div>
     <?php } ?>
+    <?php foreach($data['wikis'] as $wiki) : ?>
     <div class="wi d-flex flex-column my-3 ">
-        <h3 class="text-center fs-4 fw-bolder ">ouii bien</h3>
+        <h3 class="text-center fs-5 fw-bolder border rounded-2 "><?php echo $wiki->titre ;?></h3>
         <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
+        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium"><?php echo $wiki->categorie_name ;?></span></p>
+        <p class="truncate-text my-1"><?php echo $wiki->contenu ;?></p>
+            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success"><?php foreach($data['wikitags'][$wiki->id_wiki] as $tag) : ?>#<?php echo $tag->tag_name ;?>/ <?php endforeach; ?></span></p>
+           <div class="text-center"><a href="<?php echo URLROOT; ?>/users/contenu/<?php echo $wiki->id_wiki; ?>" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
     </div>
-    <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
+    <?php endforeach; ?>
 
-    </div>
-    <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
-    </div>
-     <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
-    </div>
-    <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
-    </div>
-    <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
-    </div>
-    <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
-    </div>
-    <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
-    </div>
-    <div class="wi d-flex flex-column  my-3">
-        <h3 class="text-center fs-5 fw-bold">ouii bien</h3>
-        <a href="#"><img src="<?php echo URLROOT; ?>/image/art.jpg" alt="img" class="edito-poster shadow-sm rounded" height="5"></a>
-        <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium">Sport</span></p>
-        <p class="truncate-text my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Hic porro quisquam voluptates odit repudiandae cum officiis[...]</p>
-            <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success">HTML/CSS/OOP/MVC</span></p>
-           <div class="text-center"><a href="" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
-
-    </div>
     
     
     
