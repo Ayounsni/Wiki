@@ -17,7 +17,13 @@
         <p class="fs-6 orange1 fw-bold m-0 ">Catégorie : <span class="text-black fw-medium"><?php echo $wiki->categorie_name ;?></span></p>
         <p class="truncate-text my-1"><?php echo $wiki->contenu ;?></p>
             <p class="fs-6 orange1 fw-bold m-0 ">Tags : <span class=" fw-medium text-success"><?php foreach($data['wikitags'][$wiki->id_wiki] as $tag) : ?>#<?php echo $tag->tag_name ;?>/ <?php endforeach; ?></span></p>
-           <div class="text-center"><a href="<?php echo URLROOT; ?>/users/contenu/<?php echo $wiki->id_wiki; ?>" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a> </div> 
+                <div class="d-flex justify-content-between align-items-center  "> 
+                <a href="<?php echo URLROOT; ?>/admins/editCat/" class=" my-2 "> <button class="btn btn-outline-success btn-sm  text-decoration-none ">
+            <i class="bi bi-pencil-fill"></i></button></a>
+           <a href="<?php echo URLROOT; ?>/users/contenu/<?php echo $wiki->id_wiki; ?>" class="btn btn-sm orange text-light text-center w-50 my-4 "><i class="bi bi-book"></i> Read more</a>
+           <a href="<?php echo URLROOT; ?>/admins/editCat/" class=" my-2 "> <button class="btn btn-outline-danger   btn-sm   text-decoration-none ">
+            <i class="bi bi-trash3-fill"></i> </button></a>
+            </div>
     </div>
     <?php endforeach; ?>
 

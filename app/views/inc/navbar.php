@@ -42,7 +42,7 @@
                             <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/auteurs/index">Mes Wikis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/users/logout">Catégories</a>
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/auteurs/categorie">Catégories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/logout">Logout</a>

@@ -9,7 +9,7 @@ class Categorie {
     }
 
     public function displayCat(){
-        $this->db->query('SELECT * FROM categories');
+        $this->db->query('SELECT * FROM categories ORDER BY creation_date DESC');
         $this->db->execute();
 
        $resultat= $this->db->resultSet();

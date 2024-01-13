@@ -4,10 +4,14 @@
 <main class="site-fr container main rounded-bottom shadow mb-3 bg-light">
 <div class="container center mt-4 mb-4 ">
             <div class="row ">
+            <div class="d-flex justify-content-start"><a href="<?php echo URLROOT; ?>/users/index" class="fs-6 btn orange text-white mb-2 "><i class="bi bi-backspace-fill"></i> Retour</a></div>
                 <div class="col d-flex justify-content-center ">
+                    
 
                     <div class="card shadow-lg " style="width: 950px;">
+                    
                         <div class="card-header navbar-scroll ">
+                    
                             <h3 class="mb-0 text-center text-light fw-light w-100">Créer une Wiki</h3>
                         </div>
                         <div class="card-body orang d-flex flex-column align-items-center w-100">

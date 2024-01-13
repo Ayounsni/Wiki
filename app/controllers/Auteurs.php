@@ -44,7 +44,7 @@
         if(empty($data['nameCat_err']) && empty($data['nameWiki_err']) && empty($data['tags_err']) && empty($data['contenu_err']) ){
           // Validated  
             if($this->wikiModal->addWiki($data)){
-                redirect('users/index');
+                redirect('auteurs/index');
               
             }else{
               
@@ -91,18 +91,12 @@
         }
      public function categorie(){
 
-            // $wikis = $this->wikiModal->displayWikiAuteur();
-            // $wikitags = [];
-            // foreach ($wikis as $wiki) {
-            //     $wikitags[$wiki->id_wiki] = $this->wikiModal->displayWikiTag($wiki->id_wiki);
-            // }
-      
-            // $data=[
-            //   "wikis" => $wikis,
-            //   "wikitags"=>$wikitags,
-      
-            // ];  
-              $this->view('auteurs/cat');
+        $categories=$this->catModal->displayCat();
+        
+        $data = [
+            'categories'=> $categories,
+        ];
+              $this->view('auteurs/cat',$data);
             }
 
 

@@ -13,7 +13,7 @@
             <i class="bi bi-pencil-fill"></i></button></a>
         <h5 class="m-0 p-2 " style="width: 200px;"><?php echo $categorie->categorie_name; ?></h5> 
          <a href="<?php echo URLROOT; ?>/admins/deleteCat/<?php echo $categorie->id_categorie; ?>" class="float-right my-2"> <button class="btn orange   btn-sm text-white  text-decoration-none ">
-            <i class="bi bi-trash3-fill"></i></i> </button></a></div>
+            <i class="bi bi-trash3-fill"></i> </button></a></div>
             <?php endforeach; ?>      
              </div>
     </div>
