@@ -17,7 +17,6 @@
       $data=[
         "wikis" => $wikis,
         "wikitags"=>$wikitags,
-
       ];
    
       
@@ -178,7 +177,12 @@
         $_SESSION['user_nom'] = $user->nom;
         $_SESSION['user_prenom'] = $user->prenom;
         $_SESSION['role'] = $user->role;
-        redirect('users/index');
+        if($_SESSION['role']== 'admin'){
+          redirect('admins/dashboard');
+        }else{
+          redirect('users/index');
+        }
+        
       }
   
       public function logout(){
@@ -206,5 +210,23 @@
 
       $this->view('users/contenu',$data);
     }
+
+    // Dans votre contrôleur (Users.php)
+    public function searchAjax(){
+      if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['term'])) {
+        $term = $_GET['term'];
+        
+        // Appelez votre modèle pour effectuer la recherche
+        $results = $this->wikiModal->searchWiki($term);
+
+        
+
+        // Retournez les résultats au format JSON
+        header('Content-Type: application/json');
+        echo json_encode($results);
+        exit;
+        }
     }
+
+ }
     

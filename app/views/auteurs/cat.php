@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/inc/navbar.php'; ?>
 
-<main class="site-fr container main rounded-bottom shadow mb-3 bg-light">
+<main class="site-fr container main rounded-bottom shadow mb-3 bg-light min-vh-100">
 <h1 class=" display-4 text-center mt-4 orange1 border-bottom ">Catégories</h1>
 <div class="container bootstrap snippets bootdeys" >
 <div class="row ">

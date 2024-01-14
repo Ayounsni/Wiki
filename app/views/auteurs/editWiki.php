@@ -12,7 +12,7 @@
                     
                         <div class="card-header navbar-scroll ">
                     
-                            <h3 class="mb-0 text-center text-light fw-light w-100">Créer une Wiki</h3>
+                            <h3 class="mb-0 text-center text-light fw-light w-100">Modifier une Wiki</h3>
                         </div>
                         <div class="card-body orang d-flex flex-column align-items-center w-100">
                             <img src="<?php echo URLROOT; ?>/Image/wiki.png" class="img-fluid w-25" alt="img" >
@@ -22,7 +22,7 @@
                                 <div class="form-floating w-100 mt-3">
                                     <select class="form-select" name="nameCat"
                                         aria-label="Floating label select example">
-                                        <option value="" selected>Sélectionnez Catégorie</option>
+                                        <option value="<?php echo $data['id'] ?>" selected><?php echo $data['nameCat'] ?></option>
                                         <?php foreach($data['categories'] as $categorie) : ?>
                                             <option value='<?php echo $categorie->id_categorie; ?>'><?php echo $categorie->categorie_name; ?></option>
                                             <?php endforeach; ?>  
@@ -37,13 +37,13 @@
                                     <span class="ms-2 text-danger "><?php echo $data['nameWiki_err'] ?></span>
                                 </div>
                                 <div class="form-floating mt-3  ">
-                                    <textarea name="contenu" class="form-control h-80" value="<?php echo $data['contenu'] ?>" placeholder="Leave a comment here"
-                                        id="floatingTextarea"></textarea>
+                                    <textarea name="contenu" class="form-control h-80"  placeholder="Leave a comment here"
+                                        id="floatingTextarea"><?php echo $data['contenu'] ?></textarea>
                                     <label for=" floatingTextarea" class="text-secondary">Contenu</label>
                                     <span  class="ms-2 text-danger "><?php echo $data['contenu_err'] ?></span>
                                 </div>
                                 <div class="mt-3">
-                                    <p class="m-0">Ajoutez des tags :</p>
+                                    <p class="m-0">Ajoutez tags (les anciens seront supprimés après la modification) :</p>
                                     <select id="tags" name="tags[]" class="form-control" multiple required >
                                     <?php foreach($data['tagss'] as $tags) : ?>
                                             <option value='<?php echo $tags->id_tag; ?>'><?php echo $tags->tag_name; ?></option>
@@ -52,7 +52,7 @@
                                     <span  class="ms-2 text-danger "><?php echo $data['tags_err'] ?></span>
                                     <div class="pt-1 mb-3 d-flex mt-2 justify-content-end">
                                         <button class="btn orange text-white btn-md btn-block " type="submit"
-                                            name="submit">Créer</button>
+                                            name="submit">Modifier</button>
                                     </div>
                                 </div>
                             </form>

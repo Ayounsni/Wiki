@@ -1,7 +1,8 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/inc/navbar.php'; ?>
-<main class="site-fr container main rounded-bottom shadow mb-3 bg-light ">
+<main class="site-fr container main rounded-bottom shadow mb-3 bg-light min-vh-100 ">
     <h1 class=" display-6 text-center my-4 orange1 border-bottom ">Gestion Catégories</h1>
+    <?php flash('catégorie'); ?>
     <div class="">
         <div class="d-flex justify-content-center gap-4 flex-wrap mb-4  ">
             <div class="d-flex  justify-content-between align-items-center orange my-2  px-3 text-center shadow rounded-4  ">  
@@ -18,6 +19,7 @@
              </div>
     </div>
     <h1 class=" display-6 text-center mb-3 mt-5 orange1 border-bottom ">Gestion Tags</h1>
+    <?php flash('tag'); ?>
     <div class="">
         <div class="d-flex justify-content-center gap-4 flex-wrap mb-5 ">
             <div class="d-flex  justify-content-between align-items-center orange my-4 px-3 text-center shadow rounded-4  ">  

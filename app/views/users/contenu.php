@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/inc/navbar.php'; ?>
 
-<main class="site-fr container main rounded-bottom shadow mb-3 bg-light ">
+<main class="site-fr container main rounded-bottom shadow mb-3 bg-light min-vh-100 ">
     <h1 class=" display-3 text-center my-3 orange1 border-bottom ">Wiki</h1>
     <div class="container ">
     <div class="d-flex justify-content-start"><a href="<?php echo URLROOT; ?>/users/index" class="fs-6 btn orange text-white"><i class="bi bi-backspace-fill"></i> Retour</a></div>

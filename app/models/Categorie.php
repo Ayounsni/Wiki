@@ -71,4 +71,20 @@ class Categorie {
           return false;
         } 
     }
+    public function totalCat(){
+      $this->db->query('SELECT COUNT(*) AS total_cat FROM categories');
+      $this->db->execute();
+      $resultat = $this->db->single();
+
+      return $resultat;
+    }
+
+    public function totalCatWiki(){
+      $this->db->query('SELECT categories.categorie_name , COUNT(wikis.id_wiki) AS total_wiki FROM categories LEFT JOIN wikis 
+      ON categories.id_categorie = wikis.categorie_id AND wikis.archive= 0 GROUP BY categories.id_categorie ORDER BY total_wiki DESC LIMIT 3');
+      $this->db->execute();
+      $resultat = $this->db->resultSet();
+      return $resultat;
+    }
+    
 }

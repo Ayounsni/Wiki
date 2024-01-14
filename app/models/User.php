@@ -47,6 +47,27 @@ class User {
             return false;
         }
     }
+
+    public function totalUser(){
+        $this->db->query('SELECT COUNT(*) AS total_user FROM users WHERE role="auteur"');
+        $this->db->execute();
+        $resultat = $this->db->single();
+
+        return $resultat;
+    }
+
+    public function totalUserWiki(){
+        $this->db->query('SELECT users.prenom, users.nom, COUNT(wikis.id_wiki) AS nombre_wikis FROM users
+        LEFT JOIN wikis ON users.id_user = wikis.user_id AND wikis.archive = 0
+        GROUP BY users.id_user
+        ORDER BY nombre_wikis DESC
+        LIMIT 3');
+        $this->db->execute();
+        $resultat = $this->db->resultSet();
+
+        return $resultat;
+    }
+
     
 
 }

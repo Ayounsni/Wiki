@@ -4,7 +4,7 @@
                 <img src="<?php echo URLROOT; ?>/image/wiko.png" alt="logo" class="rounded-4 p-2 " style="width: 120px; height: 55px;">
                 <div class="p-1 bg-light rounded rounded-pill shadow-sm w-50 mx-auto  text-center ">
         <div class="input-group">
-           <input type="search" placeholder="Recherche..." aria-describedby="button-addon1" class="form-control rounded rounded-pill border-0 bg-light">
+           <input type="search" id="searchInputMain" placeholder="Recherche..." aria-describedby="button-addon1" class="form-control rounded rounded-pill border-0 bg-light">
          <div class="input-group-append">
        <button id="button-addon1" type="submit" class="btn btn-link orange1"><i class="fa fa-search"></i></button>
         </div>
@@ -25,7 +25,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/statistiques">Dashboard</a>
+                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/admins/dashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/admins/index">Management</a>
@@ -48,9 +48,7 @@
                             <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/logout">Logout</a>
                         </li>
                         <?php }else{ ?>
-                        <li class="nav-item">
-                            <a class="nav-link text-center text-white fs-6 fw-medium titre" href="<?php echo URLROOT; ?>/users/index">Accueil</a>
-                        </li>              
+                                 
                         <li class="nav-item">
                             <a class="nav-link text-center text-white fs-6 fw-medium btn btn-outline-info " href="<?php echo URLROOT; ?>/users/register">S'incrire</a>
                         </li>

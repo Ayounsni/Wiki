@@ -4,6 +4,8 @@
     public function __construct(){
       $this->catModal = $this->model('categorie');
       $this->tagModal = $this->model('tag');
+      $this->wikiModal = $this->model('wiki');
+      $this->userModal = $this->model('user');
     }
 
     public function index(){
@@ -28,10 +30,7 @@
           'nameCat_err'=> '',       
         ];
     
-        
-        
-
-        // Validate Email
+      
         if(empty($data['nameCat'])){
           $data['nameCat_err'] = 'Veuillez entrer le nom du catégorie';
         }elseif($this->catModal->checkCat($data['nameCat'])){
@@ -42,7 +41,7 @@
         if(empty($data['nameCat_err'])){
           // Validated  
             if($this->catModal->addCat($data)){
-                // flash('projet ajoutée','projet ajoutée');
+              flash('catégorie','Catégorie ajouter!');
                 redirect('admins/index');
               
             }else{
@@ -90,7 +89,7 @@
         if(empty($data['nameCat_err'])){
           // Validated  
             if($this->catModal->updateCat($data)){
-                // flash('projet ajoutée','projet ajoutée');
+              flash('catégorie','Catégorie mise a jour!');
                 redirect('admins/index');
               
             }else{
@@ -143,7 +142,7 @@
         if(empty($data['nameTag_err'])){
           // Validated  
             if($this->tagModal->addTag($data)){
-                // flash('projet ajoutée','projet ajoutée');
+              flash('tag','Tag ajouter!');
                 redirect('admins/index');
               
             }else{
@@ -189,7 +188,7 @@
         if(empty($data['nameTag_err'])){
           // Validated  
             if($this->tagModal->updateTag($data)){
-                // flash('projet ajoutée','projet ajoutée');
+              flash('tag','Tag mise a jour!');
                 redirect('admins/index');
               
             }else{
@@ -224,7 +223,7 @@
             // }
 
         if($this->catModal->deleteCat($id)){
-            // flash('projet ajoutée','projet suprimmée');
+          flash('catégorie','Catégorie suprimmée!');
             redirect('admins/index');
 
         }else{
@@ -241,13 +240,47 @@
         // }
 
     if($this->tagModal->deleteTag($id)){
-        // flash('projet ajoutée','projet suprimmée');
+        flash('tag','Tag suprimmée!');
         redirect('admins/index');
 
     }else{
         die('error');
     }
-}
+  }
+
+   public function archive($id){
+
+    if($this->wikiModal->archiveWiki($id)){
+      flash('wiki','Wiki archivée!');
+      redirect('users/index');
+
+        }else{
+          die('error');
+        }
+   }
+   public function dashboard(){
+
+    $wikis = $this->wikiModal->totalWiki();
+    $users = $this->userModal->totalUser();
+    $tags = $this->tagModal->totalTag();
+    $cat = $this->catModal->totalCat();
+    $userWikis = $this->userModal->totalUserWiki();
+    $catWikis = $this->catModal->totalCatWiki();
+    $tagWikis = $this->tagModal->totalTagWiki();
+
+    $data = [
+      'users' => $users,
+      'wikis' => $wikis,
+      'tags' => $tags,
+      'cat' => $cat,
+      'userWikis'=> $userWikis,
+      'catWikis' =>$catWikis,
+      'tagWikis' => $tagWikis,
+    ];
+
+    $this->view('admin/dashboard',$data);
+   }
+
    
     }
     
