@@ -15,8 +15,9 @@
                     <p class=" fw-bold ">Catégorie: <span class="orange1 fw-normal"><?php echo $data['wikis']->categorie_name  ?></span></p>
                     <p class="fw-bold">Tags: <span class="orange1 fw-normal"> <?php foreach($data['wikitags'] as $tag) : ?>#<?php echo $tag->tag_name ;?> / <?php endforeach; ?> </span></p>
                 </div>
-                <div class=" ">
+                <div class="d-flex flex-column ">
                     <p class="fw-bold ">Auteur: <span class="orange1 fw-normal"><?php echo $data['wikis']->prenom; echo ' '; echo $data['wikis']->nom ;?></span></p>
+                    <p class="fw-bold ">Publier: <span class="orange1 fw-normal"><?php echo date('Y-m-d', strtotime ($data['wikis']->dateCreation)) ;?></span></p>
                 </div>
              </div>
             </div>

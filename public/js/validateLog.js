@@ -4,7 +4,7 @@ function validateForme(e) {
 
  
         var emailRegex = /^\S+@\S+\.\S+$/;
-        var passRegex = /^.{8,}$/;
+        var passRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
 
     const errors = {};
 
@@ -28,7 +28,7 @@ function validateForme(e) {
         clearError("emaile");
     }
     if (!password.match(passRegex)) {
-        displayError("passworde", "Veuillez entrer un mot de passe valide (au moins 8 caractères)");
+        displayError("passworde", "Veuillez entrer un mot de passe valide (au moins une lettre majuscule, une lettre minuscule et un chiffre)");
     } else {
         clearError("passworde");
     }

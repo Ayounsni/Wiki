@@ -149,6 +149,17 @@ class Wiki {
 
         return $resultat;
     }
+    public function checkId($id) {
+        $this->db->query('SELECT * FROM wikis WHERE id_wiki = :id ');
+        $this->db->bind(':id',$id);
+        $row = $this->db->single();
+        if($this->db->rowCount()> 0){
+            return true; 
+        } else{
+            return false;
+        }
+    }
+  
 
     
     

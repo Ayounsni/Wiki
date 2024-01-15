@@ -6,6 +6,11 @@
       $this->tagModal = $this->model('tag');
       $this->wikiModal = $this->model('wiki');
       $this->userModal = $this->model('user');
+      if(!isLoggedIn()){
+        redirect('users/login');  
+       } elseif($_SESSION['role']== 'auteur'){
+        redirect('auteurs/index');  
+       }
     }
 
     public function index(){

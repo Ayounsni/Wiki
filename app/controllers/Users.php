@@ -24,6 +24,9 @@
       }
 
     public function login(){
+      if(isLoggedIn()){
+        redirect('users/index');
+    }
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Process form
         // Sanitize POST data
@@ -36,7 +39,7 @@
           'email_err' => '',
           'password_err' => '',      
         ];
-        $pattern_mot_de_passe =  '/^.{8,}$/';
+        $pattern_mot_de_passe = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/';
 
         // Validate Email
         if(empty($data['email'])){
@@ -51,7 +54,7 @@
         if(empty($data['password'])){
           $data['password_err'] = ' Veuillez entrer le mot de passe';
         }elseif(!preg_match($pattern_mot_de_passe,$data['password'])){
-            $data['password_err'] = 'Veuillez entrer un mot de passe valide (au moins 8 caractères)';
+            $data['password_err'] = 'Veuillez entrer un mot de passe valide (au moins une lettre majuscule, une lettre minuscule et un chiffre)';
           }
 
         // Make sure errors are empty
@@ -86,7 +89,9 @@
       }
       }
     public function register(){
-        // Check for POST
+      if(isLoggedIn()){
+        redirect('users/index');  
+       }     
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
           // Process form
     
@@ -106,7 +111,7 @@
           ];
           $pattern_nom_prenom = '/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]{3,}$/u';
           $pattern_email = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
-          $pattern_mot_de_passe =  '/^.{8,}$/';
+          $pattern_mot_de_passe =  '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/';
   
           // Validate Email
           if(empty($data['email'])){
@@ -134,7 +139,7 @@
           if(empty($data['password'])){
             $data['password_err'] = 'Veuillez enter le mot de passe';
           } elseif(!preg_match($pattern_mot_de_passe,$data['password'])){
-            $data['password_err'] = 'Veuillez entrer un mot de passe valide (au moins 8 caractères)';
+            $data['password_err'] = 'Veuillez entrer un mot de passe valide (au moins une lettre majuscule, une lettre minuscule et un chiffre)';
           }
   
           // Make sure errors are empty
@@ -198,6 +203,11 @@
       $this->view('users/valid');
     }
     public function contenu($id){
+        if($this->wikiModal->checkId($id)){
+         
+        }else{
+          redirect('users/index');
+        }
       $wikis = $this->wikiModal->displayWikiById($id);
           $wikitags = $this->wikiModal->displayWikiTag($wikis->id_wiki);
       

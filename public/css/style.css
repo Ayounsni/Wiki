@@ -1,31 +1,12 @@
-
-
-/* Color of the navbar BEFORE scroll */
 .navbar-scroll {
   background-color: #1989AC;
 }
 
-/* Color of the links AFTER scroll */
-.navbar-scrolled .nav-link,
-.navbar-scrolled .navbar-toggler-icon,
-.navbar-scroll .navbar-brand {
-  color: #8d1b1b;
-}
-
-/* Color of the navbar AFTER scroll */
-.navbar-scrolled {
-  background-color: #fff;
-}
-
-/* An optional height of the navbar AFTER scroll */
 .navbar.navbar-scroll.navbar-scrolled {
   padding-top: auto;
   padding-bottom: auto;
 }
-.navbar-brand {
-  font-size: unset;
-  height: 3.5rem;
-}
+
 body{
     background-color:  #D9EEFC;
 }
@@ -52,112 +33,14 @@ body{
 .orange1{
   color: #1989AC;
 }
-.card {
-  border: none;
-  border-radius: 10px
-}
 
-.c-details span {
-  font-weight: 300;
-  font-size: 13px
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-  background-color: #eee;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 39px
-}
-
-.badge span {
-  background-color: #fffbec;
-  width: 60px;
-  height: 25px;
-  padding-bottom: 3px;
-  border-radius: 5px;
-  display: flex;
-  color: #fed85d;
-  justify-content: center;
-  align-items: center
-}
-
-.progress {
-  height: 10px;
-  border-radius: 10px
-}
-
-.progress div {
-  background-color: red
-}
-
-.text1 {
-  font-size: 14px;
-  font-weight: 600
-}
-
-.text2 {
-  color: #a5aec0
-}
-
-.thumb-sm {
-  height: 36px;
-  width: 36px;
-}
-.card-box {
-  padding: 20px;
-  border-radius: 3px;
-  margin-bottom: 30px;
-  background-color: #fff;
-}
-.taskList {
-  min-height: 40px;
-  margin-bottom: 0
-}
-
-.taskList li {
-  background-color: #fff;
-  border: 1px solid rgba(121, 121, 121, .2);
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 3px
-}
-
-.taskList li:last-of-type {
-  margin-bottom: 0
-}
-
-.taskList a {
-  font-size: 13px
-}
-
-.taskList .checkbox {
-  margin-left: 20px;
-  margin-top: 5px
-}
 .text-muted {
   color: #98a6ad!important;
 }
-.shadow-primary {
-  box-shadow: 0 0 10px #FF906C !important; 
-}
+
 .h1{
   height: 50px !important;
 }
-.form-control:focus {
-  box-shadow: none;
-}
-
-.form-control-underlined {
-  border-width: 0;
-  border-bottom-width: 1px;
-  border-radius: 0;
-  padding-left: 0;
-}
-
 
 .form-control::placeholder {
   font-size: 0.95rem;
@@ -179,9 +62,6 @@ body{
     margin-top: 30px;
 }
 
-.card[data-radius="none"] {
-    border-radius: 0px;
-}
 .card {
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
@@ -192,25 +72,11 @@ body{
     z-index: 1;
 }
 
-
-.card[data-background="image"] .title, .card[data-background="image"] .stats, .card[data-background="image"] .category, .card[data-background="image"] .description, .card[data-background="image"] .content, .card[data-background="image"] .card-footer, .card[data-background="image"] small, .card[data-background="image"] .content a, .card[data-background="color"] .title, .card[data-background="color"] .stats, .card[data-background="color"] .category, .card[data-background="color"] .description, .card[data-background="color"] .content, .card[data-background="color"] .card-footer, .card[data-background="color"] small, .card[data-background="color"] .content a {
-    color: #FFFFFF;
-}
 .card.card-just-text .content {
     padding: 50px 65px;
     text-align: center;
 }
-.card .content {
-    padding: 20px 20px 10px 20px;
-}
-.card[data-color="blue"] .category {
-    color: #7a9e9f;
-}
 
-.card .category, .card .label {
-    font-size: 14px;
-    margin-bottom: 0px;
-}
 .card-big-shadow:before {
     background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
     background-position: center bottom;
@@ -225,83 +91,14 @@ body{
     top: 0;
     z-index: 0;
 }
-h4, .h4 {
-    font-size: 1.5em;
-    font-weight: 600;
-    line-height: 1.2em;
-}
-h6, .h6 {
-    font-size: 0.9em;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.card .description {
-    font-size: 16px;
-    color: #66615b;
-}
 .content-card{
     margin-top:30px;    
 }
 a:hover, a:focus {
     text-decoration: none;
 }
-
-/*======== COLORS ===========*/
 .card[data-color="blue"] {
     background: #b8d8d8;
-}
-.card[data-color="blue"] .description {
-    color: #506568;
-}
-
-.card[data-color="green"] {
-    background: #c23c0c;
-}
-.card[data-color="green"] .description {
-    color: #99eb1f;
-}
-.card[data-color="green"] .category {
-    color: #fb4b1b;
-}
-
-.card[data-color="yellow"] {
-    background: #ffe28c;
-}
-.card[data-color="yellow"] .description {
-    color: #b25825;
-}
-.card[data-color="yellow"] .category {
-    color: #d88715;
-}
-
-.card[data-color="brown"] {
-    background: #d6c1ab;
-}
-.card[data-color="brown"] .description {
-    color: #75442e;
-}
-.card[data-color="brown"] .category {
-    color: #a47e65;
-}
-
-.card[data-color="purple"] {
-    background: #baa9ba;
-}
-.card[data-color="purple"] .description {
-    color: #3a283d;
-}
-.card[data-color="purple"] .category {
-    color: #5a283d;
-}
-
-.card[data-color="orange"] {
-    background: #ff8f5e;
-}
-.card[data-color="orange"] .description {
-    color: #772510;
-}
-.card[data-color="orange"] .category {
-    color: #e95e37;
 }
 .blo{
   background-color: #0b6298;
@@ -322,7 +119,7 @@ a:hover, a:focus {
   
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Limite le nombre de lignes à afficher */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 .ble{
@@ -376,7 +173,6 @@ a:hover, a:focus {
 .border-warning {
     border-left: 5px solid  #ffc107 !important;
 }
-
 
 .card {
     position: relative;

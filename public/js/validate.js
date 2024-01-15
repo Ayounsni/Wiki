@@ -7,7 +7,7 @@ function validateForm(e) {
     var nomRegex = /^[A-Za-z\s']{3,}$/;
         var prenomRegex = /^[A-Za-z\s']{3,}$/;
         var emailRegex = /^\S+@\S+\.\S+$/;
-        var passRegex = /^.{8,}$/;
+        var passRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
 
     const errors = {};
 
@@ -40,7 +40,7 @@ function validateForm(e) {
         clearError("email");
     }
     if (!password.match(passRegex)) {
-        displayError("password", "Veuillez entrer un mot de passe valide (au moins 8 caractères)");
+        displayError("password", "Veuillez entrer un mot de passe valide (au moins une lettre majuscule, une lettre minuscule et un chiffre)");
     } else {
         clearError("password");
     }

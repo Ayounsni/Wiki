@@ -5,6 +5,11 @@
       $this->catModal = $this->model('categorie');
       $this->tagModal = $this->model('tag');
       $this->wikiModal = $this->model('wiki');
+      if(!isLoggedIn()){
+        redirect('users/login');  
+       } elseif($_SESSION['role']== 'admin'){
+        redirect('admins/dashboard');  
+       }
     }
 
     public function addWiki(){
@@ -103,9 +108,9 @@
       public function deleteWiki($id){
 
         $wiki = $this->wikiModal->displayWikiById($id);
-         // if($wiki->user_id != $_SESSION['user_id']){
-            //     redirect('projets/index');
-            // }
+         if($wiki->user_id != $_SESSION['user_id']){
+                redirect('auteurs/index');
+            }
 
         if($this->wikiModal->deleteWiki($id)){
           flash('wiki','Wiki suprimmée!');
@@ -169,6 +174,9 @@
         }else{
 
           $wikis = $this->wikiModal->displayWikiById($id);
+           if($wikis->user_id != $_SESSION['user_id']){
+            redirect('auteurs/index');
+          }
            
             $data =[
                 'id' => $wikis->id_categorie,

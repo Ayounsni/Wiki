@@ -23,43 +23,40 @@
         </div>
        
         <div class="col-lg-3 col-md-6 mb-1 mb-md-0">
-          <h5 class="text-uppercase">Publishing house</h5>
+          <h5 class="text-uppercase">Maison d'édition</h5>
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-white">The BookStore</a>
+              <a href="#!" class="text-white">La Librairie</a>
             </li>
             <li>
-              <a href="#!" class="text-white">123 Street</a>
+              <a href="#!" class="text-white">123 Rue</a>
             </li>
             <li>
               <a href="#!" class="text-white">05765 NY</a>
             </li>
             <li>
-              <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Send us a book</a>
+              <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Nous envoyer un livre</a>
             </li>
           </ul>
         </div>
       
         <div class="col-lg-3 col-md-6 mb-1 mb-md-0">
-          <h5 class="text-uppercase">Write to us</h5>
+          <h5 class="text-uppercase">Contact</h5>
 
           <ul class="list-unstyled">
             <li>
-              <a href="#" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Help in purchasing</a>
+              <a href="#" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Email : Wikis@gmail.com</a>
             </li>
             <li>
-              <a href="#" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Check the order status</a>
-            </li>
-            <li>
-              <a href="#" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Join the newsletter</a>
+              <a href="#" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Téléphone : +1 234 567 890</a>
             </li>
           </ul>
         </div>
         </div>
       </div>
     </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2)">
       © 2024 Copyright:
       <a class="text-white" href="<?php URLROOT; ?>">WiKi.com</a>
     </div>
